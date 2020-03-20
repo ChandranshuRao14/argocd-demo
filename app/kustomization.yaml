@@ -2,5 +2,5 @@ resources:
 - frontend.yaml
 images:
 - name: item-cache-frontend
-  newName: gcr.io/heb-next-project/item-cache-frontend
+  newName: gcr.io/kubernetes-playground-anshu/item-cache-frontend
   newTag: "1.0"
