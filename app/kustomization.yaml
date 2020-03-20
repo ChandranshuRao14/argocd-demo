@@ -3,4 +3,4 @@ resources:
 images:
 - name: item-cache-frontend
   newName: gcr.io/kubernetes-playground-anshu/item-cache-frontend
-  newTag: "v2"
+  newTag: "v1"
