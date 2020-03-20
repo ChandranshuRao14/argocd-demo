@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: item-cache-frontend-svc
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: frontend
   ports:
