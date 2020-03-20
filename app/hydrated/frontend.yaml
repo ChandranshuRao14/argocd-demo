@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: item-cache-frontend-svc
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  selector:
+    app: frontend
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - image: gcr.io/heb-next-project/item-cache-frontend:1.0
+        name: item-cache-container
+        ports:
+        - containerPort: 80

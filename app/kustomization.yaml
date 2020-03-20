@@ -1,0 +1,6 @@
+resources:
+- frontend.yaml
+images:
+- name: item-cache-frontend
+  newName: gcr.io/heb-next-project/item-cache-frontend
+  newTag: "1.0"
